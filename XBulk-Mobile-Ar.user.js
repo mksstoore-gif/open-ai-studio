@@ -6,6 +6,8 @@
 // @match        https://x.com/*
 // @match        https://twitter.com/*
 // @grant        none
+// @downloadURL  https://raw.githubusercontent.com/mksstoore-gif/open-ai-studio/sweepx-mobile/XBulk-Mobile-Ar.user.js
+// @updateURL    https://raw.githubusercontent.com/mksstoore-gif/open-ai-studio/sweepx-mobile/XBulk-Mobile-Ar.user.js
 // @run-at       document-idle
 // ==/UserScript==
 
@@ -148,7 +150,7 @@
         n++;
         acted=true;
         setStatus('تم حذف '+n+' / '+max);
-        await wait(rand(3200,5200),rand(3200,5200));
+        await sleep(rand(3200,5200));
       }
 
       if(!acted)empty++; else empty=0;
