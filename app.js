@@ -1,0 +1,3 @@
+const tabs=[...document.querySelectorAll('.tab')];const tools=[...document.querySelectorAll('.tool')];
+tabs.forEach(tab=>tab.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));tools.forEach(x=>x.classList.remove('active'));tab.classList.add('active');document.getElementById(tab.dataset.tool).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}));
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
